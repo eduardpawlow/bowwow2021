@@ -1,6 +1,6 @@
 <template lang="pug">
   header.container
-    .header__logo
+    nuxt-link(to="/").header__logo
       bowwow-logo
 
     nav.header__nav
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import BowwowLogo from '~/assets/img/svg/bowwow-logo.svg?inline'
+import BowwowLogo from '~/assets/svg/bowwow-logo.svg?inline'
 
 export default {
   components: { BowwowLogo },
@@ -24,6 +24,8 @@ export default {
 
 <style lang="scss" scoped>
 header {
+  position: relative;
+  z-index: 10;
   padding-top: 20px;
   min-height: 48px;
 

@@ -3,15 +3,11 @@ html {
     'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   line-height: 160%;
-  word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  color: var(--color, #181818);
-  fill: var(--color, #181818);
-  stroke: var(--color, #181818);
 }
 
 *,
@@ -29,34 +25,67 @@ a {
 .container {
   margin: 0 auto;
   max-width: 1264px;
+}
 
-  // @include mw(1280px) {
-  //   margin: 0 50px;
-  // }
-
-  // @include mw(719px) {
-  //   margin: 0 30px;
-  // }
+.large-container {
+  max-width: 1900px;
+  margin: 0 auto;
 }
 
 .page {
+  padding-bottom: 200px;
 }
-
-// .text-link {
-//   cursor: pointer;
-//   box-shadow: 0px 0px 0px white, 0px 1px 0px black;
-// }
 
 .h1 {
-}
-.h2 {
-}
-.h3 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
 }
 
-.text-36 {
+.h3 {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 140%;
 }
-.text-26 {
+
+.section-title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.text-14 {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+}
+
+.text-18 {
+  font-size: 18px;
+  line-height: 160%;
+}
+
+.text-tab {
+  font-size: 18px;
+  line-height: 120%;
+
+  // Возможно убрать в пользу соответсвующи классов начертания
+  &.active {
+    font-weight: 500;
+  }
+}
+
+// Не коррелирует с макетами
+.text-sevice-head {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+// Не коррелирует с макетами
+.text-sevice-subhead {
+  font-size: 14px;
+  line-height: 140%;
 }
 
 .black {
@@ -68,7 +97,7 @@ a {
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .semibold {
@@ -77,6 +106,14 @@ a {
 
 .italic {
   font-style: italic;
+}
+
+.text-secondary-grey {
+  color: map-get($colors, secondary-gray);
+}
+
+.text-primary-purple {
+  color: map-get($colors, primary-purple);
 }
 
 picture img {
